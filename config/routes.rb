@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # ↑自動で作成される。
+  devise_for :user
   root to: 'tweets#index'
   resources :tweets do
     resources :comments, only: :create
